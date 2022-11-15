@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chuck_joke_button"
+        android:text="Chuck Norris Joke"
+        android:onClick="chuckNorrisClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat_pics_button"
+        android:text="Cat Pics"
+        android:onClick="catClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/output"
+        android:text=""
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/chuck_joke_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toBottomOf="@+id/output"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent">
+
+       <GridLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/grid"
+           android:rowCount="3"
+           android:columnCount="2"/>
+   </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
